@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox Launcher</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0088ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Roblox-ga o'tkazilmoqda...</h2>
+  <p>Agar avtomatik ochilmasa, tugmani bosing:</p>
+  <button class="btn" onclick="openRoblox()">Roblox-ni ochish</button>
+
+  <script>
+    function openRoblox() {
+      const intentUrl = "intent://#Intent;scheme=roblox;package=com.roblox.client;end";
+      window.location.href = intentUrl;
+
+      setTimeout(function() {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.roblox.client";
+      }, 2500);
+    }
+
+    window.onload = function() {
+      openRoblox();
+    };
+  </script>
+</body>
+</html>
